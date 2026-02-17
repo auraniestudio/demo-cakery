@@ -35,7 +35,7 @@ function App() {
 
         {/* HEADER */}
         <header className="relative z-10 flex justify-between items-center px-4 sm:px-8 md:px-12 py-6 text-rose-300 bg-black/5">
-          <h1 className="text-2xl sm:text-3xl font-serif tracking-wide">Sweet Delights Cakery</h1>
+          <h1 className="text-2xl sm:text-3xl font-serif tracking-wide">Delights Cakery</h1>
         </header>
 
         {/* HERO TEXT */}
@@ -224,7 +224,7 @@ function App() {
 
       {/* ================= FOOTER ================= */}
       <footer className="bg-rose-100 text-black py-12 px-4 sm:px-8 text-center">
-        <h4 className="text-xl sm:text-2xl font-serif  mb-4">Sweet Delights Cakery</h4>
+        <h4 className="text-xl sm:text-2xl font-serif  mb-4">Delights Cakery</h4>
         <div className="flex justify-center gap-6 mb-6 text-2xl text-black/70">
   <a
     href="https://www.facebook.com/YourPageName"
@@ -257,7 +257,7 @@ function App() {
         
 
 
-        <p className="text-xs opacity-60">© 2026 Sweet Delights Cakery. All rights reserved.</p>
+        <p className="text-xs opacity-60">© 2026 Delights Cakery. All rights reserved.</p>
       </footer>
 
       {/* ================= SUCCESS POPUP ================= */}
