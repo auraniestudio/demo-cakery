@@ -84,7 +84,7 @@ function App() {
 
       {/* ================= STORY ================= */}
       <section id="story" className="py-16 sm:py-20 px-4 sm:px-8 md:px-12 bg-rose-100 text-center">
-        <p className="max-w-xl mx-auto text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
+        <p className="max-w-xl mx-auto text-sm sm:text-base md:text-lg text-rose-500 leading-relaxed">
           <span className="hidden md:inline">
             "We are passionate about creating elegant,<br></br> handcrafted cakes  that make every celebration unforgettable. 
             <br></br>Each cake is made with premium ingredients <br></br>and designed with love and attention to detail."
@@ -97,6 +97,7 @@ function App() {
       </section>
 
       {/* ================= GALLERY ================= */}
+      
       <section id="gallery" className="py-16 sm:py-20 px-4 sm:px-8 md:px-12 bg-grey-100">
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
   {[
