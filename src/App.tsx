@@ -13,16 +13,12 @@ function App() {
       a: "We recommend ordering at least 2–7 days in advance, depending on cake size and design." },
     { q: "Do you make custom cakes?", 
       a: "Yes! Every cake can be tailored to your theme, flavor, and occasion." },
-    { q: "Where are you located?", 
-      a: "We are a boutique home bakery serving Wellington, New Zealand." },
     { q: "Can I schedule a consultation?", 
       a: "Yes! Book a complimentary consultation through our contact form." },
     { q: "Do you offer delivery or pickup?", 
       a: "Pickup is available at our bakery, delivery within Wellington can be arranged." },
     { q: "What flavors do you offer?", 
       a: "Classic, seasonal, and custom flavors. Let us know your preference!" },
-    { q: "Do you cater for dietary restrictions?", 
-      a: "We offer gluten-free, dairy-free, and vegan options. Mention requirements when ordering." },
     { q: "Do you make cakes for weddings or corporate events?", 
       a: "Yes! Contact us early to discuss details and availability." },
   ];
@@ -39,7 +35,7 @@ function App() {
 
         {/* HEADER */}
         <header className="relative z-10 flex justify-between items-center px-4 sm:px-8 md:px-12 py-6 text-rose-300 bg-black/5">
-          <h1 className="text-2xl sm:text-3xl font-semibold tracking-wide">Sweet Delights Cakery</h1>
+          <h1 className="text-2xl sm:text-3xl font-serif tracking-wide">Sweet Delights Cakery</h1>
         </header>
 
         {/* HERO TEXT */}
@@ -48,7 +44,7 @@ function App() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className="text-3xl sm:text-4xl md:text-6xl font-light leading-tight max-w-4xl"
+            className="text-3xl sm:text-4xl md:text-6xl font-serif leading-tight max-w-5xl"
           >
             {/* Desktop */}
             <span className="hidden md:inline">Baked Fresh, Loved Daily</span>
@@ -75,7 +71,7 @@ function App() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="mt-16 sm:mt-20 border-4 border-rose-300 text-xl px-12 sm:px-10 py-3 sm:py-4 rounded-full hover:bg-rose-300 hover:text-black transition duration-300"
+            className="mt-16 sm:mt-20 border-4 border-rose-300 text-xl px-12 sm:px-10 py-3 sm:py-4 rounded-full hover:bg-rose-300 hover:text-black transition duration-300 "
           >
             Enquire Now
           </motion.a>
@@ -84,7 +80,7 @@ function App() {
 
       {/* ================= STORY ================= */}
       <section id="story" className="py-16 sm:py-20 px-4 sm:px-8 md:px-12 bg-rose-100 text-center">
-        <p className="max-w-xl mx-auto text-sm sm:text-base md:text-lg text-rose-500 leading-relaxed">
+        <p className="max-w-xl mx-auto text-sm sm:text-base md:text-lg text-rose-500 leading-relaxed font-serif ">
           <span className="hidden md:inline">
             "We are passionate about creating elegant,<br></br> handcrafted cakes  that make every celebration unforgettable. 
             <br></br>Each cake is made with premium ingredients <br></br>and designed with love and attention to detail."
@@ -144,7 +140,7 @@ function App() {
           <img src="/cake2.jpg" alt="Cake in Wellington" className="rounded-2xl shadow-lg h-48 sm:h-64 md:h-auto w-full object-cover"/>
 
           <div>
-            <h2 className="text-2xl sm:text-3xl md:text-3xl font-semibold mb-4 text-rose-600">Send Us Your Cake Dreams</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-3xl font-serif  mb-4 text-rose-600">Send Us Your Cake Dreams</h2>
             <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6">
               <span className="hidden md:inline">
                 Curious about seasonal menus, catering packages, or wholesale partnerships? Reach out for a complimentary consultation, our team is ready to discuss how we can sweeten your next gathering.
@@ -214,7 +210,7 @@ function App() {
       {/* ================= FAQ ================= */}
       <section className="py-16 sm:py-20 px-4 sm:px-8 md:px-12 bg-gray-100">
         <div className="max-w-3xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl md:text-3xl font-semibold text-center mb-8 sm:mb-12">Your Question, Answered</h3>
+          <h3 className="text-2xl sm:text-3xl md:text-3xl font-serif  text-center mb-8 sm:mb-12">Your Question, Answered</h3>
           <div className="space-y-3 sm:space-y-4">
             {faqs.map((item,i)=>(
               <div key={i} className="bg-white rounded-xl p-4 sm:p-5 cursor-pointer shadow-sm" onClick={()=>setOpen(open===i?null:i)}>
@@ -228,7 +224,7 @@ function App() {
 
       {/* ================= FOOTER ================= */}
       <footer className="bg-rose-100 text-black py-12 px-4 sm:px-8 text-center">
-        <h4 className="text-xl sm:text-2xl font-semibold mb-4">Sweet Delights Cakery</h4>
+        <h4 className="text-xl sm:text-2xl font-serif  mb-4">Sweet Delights Cakery</h4>
         <div className="flex justify-center gap-6 mb-6 text-2xl text-black/70">
   <a
     href="https://www.facebook.com/YourPageName"
