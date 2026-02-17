@@ -39,7 +39,8 @@ function App() {
         </header>
 
         {/* HERO TEXT */}
-        <div className="relative z-10 flex flex-col justify-center items-center text-center text-white px-4 sm:px-8 md:px-10 min-h-[63vh]">
+        <div className="relative z-10 flex flex-col justify-center items-center text-center text-white px-4 sm:px-8 md:px-10 min-h-[75vh] md:min-h-screen
+">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -47,9 +48,10 @@ function App() {
             className="text-3xl sm:text-4xl md:text-6xl font-serif leading-tight max-w-5xl"
           >
             {/* Desktop */}
-            <span className="hidden md:inline">Baked Fresh, Loved Daily</span>
+            <span className="hidden md:inline">Baked Fresh Daily, <br></br>Custom Cakes in Wellington 
+            </span>
             {/* Mobile */}
-            <span className="inline md:hidden">Baked Fresh,<br></br> Loved Daily</span>
+            <span className="inline md:hidden">Baked Fresh Daily, <br></br>Custom Cakes in Wellington</span>
           </motion.h1>
 
           <motion.p
@@ -71,7 +73,8 @@ function App() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="mt-16 sm:mt-20 border-4 border-rose-300 text-xl px-12 sm:px-10 py-3 sm:py-4 rounded-full hover:bg-rose-300 hover:text-black transition duration-300 "
+            className="mt-16 sm:mt-20 border-2
+font-medium shadow-lg hover:shadow-xl px-12 sm:px-10 py-3 sm:py-4 rounded-full hover:bg-rose-300 hover:text-black transition duration-300 "
           >
             Enquire Now
           </motion.a>
@@ -82,19 +85,19 @@ function App() {
       <section id="story" className="py-16 sm:py-20 px-4 sm:px-8 md:px-12 bg-rose-100 text-center">
         <p className="max-w-xl mx-auto text-sm sm:text-base md:text-lg text-rose-500 leading-relaxed font-serif ">
           <span className="hidden md:inline">
-            "We are passionate about creating elegant,<br></br> handcrafted cakes  that make every celebration unforgettable. 
+            "We create elegant handcrafted cakes in Wellington, New Zealand, perfect for birthdays, weddings, and special celebrations.
             <br></br>Each cake is made with premium ingredients <br></br>and designed with love and attention to detail."
           </span>
           <span className="inline md:hidden">
-          We are passionate about creating elegant,<br></br> handcrafted cakes <br></br>that make every celebration unforgettable. 
-          <br></br>Each cake is made with premium ingredients <br></br>and designed <br></br>with love and attention to detail.
+          "We create elegant handcrafted cakes in <br></br> Wellington, New Zealand,<br></br>perfect for birthdays, weddings, <br></br>and special celebrations.
+          <br></br>Each cake is made with premium ingredients <br></br>and designed with love and attention to detail."
           </span>
         </p>
       </section>
 
       {/* ================= GALLERY ================= */}
       
-      <section id="gallery" className="py-16 sm:py-20 px-4 sm:px-8 md:px-12 bg-grey-100">
+      <section id="gallery" className="py-16 sm:py-20 px-4 sm:px-8 md:px-12 bg-gray-100">
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
   {[
     "/cake1.jpg",
@@ -195,7 +198,8 @@ function App() {
   name="message"
   placeholder="Tell us about your cake..."
   required
-  className="w-full border rounded-lg px-4 py-3 h-24 sm:h-28 md:h-32 resize-none focus:outline-none focus:ring-2"
+  className="w-full border rounded-lg px-4 py-3 h-24 sm:h-28 md:h-32 resize-none focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-rose-400
+"
 />
 
 
