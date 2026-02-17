@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { FaFacebookF, FaInstagram, FaEnvelope } from "react-icons/fa";
+
 
 function App() {
   const [submitted, setSubmitted] = useState(false);
@@ -36,12 +38,12 @@ function App() {
         <div className="absolute inset-0 bg-black/30"></div>
 
         {/* HEADER */}
-        <header className="relative z-10 flex justify-between items-center px-4 sm:px-8 md:px-12 py-6 text-white bg-black/5">
-          <h1 className="text-2xl sm:text-3xl font-semibold tracking-wide">Sweet Delights</h1>
+        <header className="relative z-10 flex justify-between items-center px-4 sm:px-8 md:px-12 py-6 text-rose-300 bg-black/5">
+          <h1 className="text-2xl sm:text-3xl font-semibold tracking-wide">Sweet Delights Cakery</h1>
         </header>
 
         {/* HERO TEXT */}
-        <div className="relative z-10 flex flex-col justify-center items-center text-center text-white px-4 sm:px-8 md:px-10 min-h-[90vh]">
+        <div className="relative z-10 flex flex-col justify-center items-center text-center text-white px-4 sm:px-8 md:px-10 min-h-[63vh]">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,7 +60,7 @@ function App() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.9 }}
-            className="mt-4 sm:mt-6 text-sm sm:text-base md:text-xl text-gray-200 max-w-xl"
+            className="mt-4 sm:mt-6 text-sm sm:text-base md:text-xl text-white max-w-xl"
           >
             <span className="hidden md:inline">
               From sunrise pastries to decadent celebration cakes, <br></br> we craft every bite to bring a smile to your day.
@@ -73,7 +75,7 @@ function App() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="mt-6 sm:mt-8 border border-rose-400 px-10 sm:px-8 py-2 sm:py-3 rounded-full hover:bg-rose-200 hover:text-black transition duration-300"
+            className="mt-16 sm:mt-20 border-4 border-rose-300 text-xl px-12 sm:px-10 py-3 sm:py-4 rounded-full hover:bg-rose-300 hover:text-black transition duration-300"
           >
             Enquire Now
           </motion.a>
@@ -95,24 +97,44 @@ function App() {
       </section>
 
       {/* ================= GALLERY ================= */}
-      <section id="gallery" className="py-16 sm:py-20 px-4 sm:px-8 md:px-12 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-2xl sm:text-3xl md:text-3xl font-semibold text-center mb-8 sm:mb-12">Our Cake Gallery</h3>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
-            {["/cake1.jpg","/cake2.jpg","/cake3.jpg","/cake4.jpg","/cake5.jpg","/cake6.jpg"].map((src,i)=>(
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i*0.08 }}
-                className="group overflow-hidden rounded-2xl shadow-md"
-              >
-                <img src={src} alt="Cake in Wellington" className="w-full h-60 sm:h-64 md:h-72 object-cover group-hover:scale-105 transition duration-700"/>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+      <section id="gallery" className="py-16 sm:py-20 px-4 sm:px-8 md:px-12 bg-grey-100">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+  {[
+    "/cake1.jpg",
+    "/cake2.jpg",
+    "/cake3.jpg",
+    "/cake4.jpg",
+    "/cake5.jpg",
+    "/cake6.jpg"
+  ].map((src, i) => {
+    const altTexts = [
+      "Berries cake in Wellington",
+      "Event cake with mix of flowers",
+      "Orange birthday cake ",
+      "Chocolate Forest kids party cake",
+      "Deluxe Carrot ganache cake",
+      "Cookie cakes assortment"
+    ];
+
+    return (
+      <motion.div
+        key={i}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: i * 0.08 }}
+        className="group overflow-hidden rounded-2xl shadow-md"
+      >
+        <img
+          src={src}
+          alt={altTexts[i]}  // ✅ assign different alt for each image
+          className="w-full h-60 sm:h-64 md:h-72 object-cover group-hover:scale-105 transition duration-700"
+        />
+      </motion.div>
+    );
+  })}
+</div>
+
       </section>
 
       {/* ================= CONTACT ================= */}
@@ -121,7 +143,7 @@ function App() {
           <img src="/cake2.jpg" alt="Cake in Wellington" className="rounded-2xl shadow-lg h-48 sm:h-64 md:h-auto w-full object-cover"/>
 
           <div>
-            <h3 className="text-2xl sm:text-3xl md:text-3xl font-semibold mb-4">Stay in Touch</h3>
+            <h2 className="text-2xl sm:text-3xl md:text-3xl font-semibold mb-4 text-rose-600">Send Us Your Cake Dreams</h2>
             <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-6">
               <span className="hidden md:inline">
                 Curious about seasonal menus, catering packages, or wholesale partnerships? Reach out for a complimentary consultation, our team is ready to discuss how we can sweeten your next gathering.
@@ -150,14 +172,35 @@ function App() {
               }}
               className="space-y-3 sm:space-y-4"
             >
-              <input type="text" name="name" placeholder="Your Name" required className="w-full border rounded-lg px-4 py-2 sm:py-3"/>
-              <input type="email" name="email" placeholder="Email" required className="w-full border rounded-lg px-4 py-2 sm:py-3"/>
-              <textarea
+              <label className="block mb-1 font-medium" htmlFor="name">Your Name</label>
+<input
+  id="name"
+  type="text"
+  name="name"
+  placeholder="Your Name"
+  required
+  className="w-full border rounded-lg px-4 py-2 sm:py-3"
+/>
+
+<label className="block mb-1 font-medium" htmlFor="email">Email</label>
+<input
+  id="email"
+  type="email"
+  name="email"
+  placeholder="Email"
+  required
+  className="w-full border rounded-lg px-4 py-2 sm:py-3"
+/>
+
+<label className="block mb-1 font-medium" htmlFor="message">Message</label>
+<textarea
+  id="message"
   name="message"
   placeholder="Tell us about your cake..."
   required
-  className="w-full border rounded-lg px-4 py-3 h-24 sm:h-28 md:h-32 resize-none focus:outline-none focus:ring-2 focus:ring-rose-400 transition"
+  className="w-full border rounded-lg px-4 py-3 h-24 sm:h-28 md:h-32 resize-none focus:outline-none focus:ring-2"
 />
+
 
               <button type="submit" disabled={loading} className="bg-rose-600 text-white px-5 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-rose-700 transition disabled:opacity-50">
                 {loading ? "Sending..." : "Send Message"}
@@ -183,17 +226,41 @@ function App() {
       </section>
 
       {/* ================= FOOTER ================= */}
-      <footer className="bg-rose-200 text-black py-12 px-4 sm:px-8 text-center">
+      <footer className="bg-rose-100 text-black py-12 px-4 sm:px-8 text-center">
         <h4 className="text-xl sm:text-2xl font-semibold mb-4">Sweet Delights Cakery</h4>
-        <p className="opacity-80">email@example.com</p>
-        <p className="opacity-80">+64 21 000 0000</p>
+        <div className="flex justify-center gap-6 mb-6 text-2xl text-black/70">
+  <a
+    href="https://www.facebook.com/YourPageName"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-rose-400 transition"
+  >
+    <FaFacebookF />
+  </a>
+
+  <a
+    href="https://www.instagram.com/YourInstagramName"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-rose-400 transition"
+  >
+    <FaInstagram />
+  </a>
+
+  <a
+    href="mailto:youremail@example.com"
+    className="hover:text-rose-400 transition"
+  >
+    <FaEnvelope />
+  </a>
+</div>
+
+        
         <p className="opacity-80 mb-6">Wellington, New Zealand</p>
-        <div className="flex justify-center gap-4 sm:gap-6 mb-6 text-sm">
-          <a href="#" className="hover:opacity-70">Instagram</a>
-          <a href="#" className="hover:opacity-70">Facebook</a>
-          <a href="#" className="hover:opacity-70">Email</a>
-        </div>
-        <p className="text-xs opacity-60">© 2026 Sweet Delights. All rights reserved.</p>
+        
+
+
+        <p className="text-xs opacity-60">© 2026 Sweet Delights Cakery. All rights reserved.</p>
       </footer>
 
       {/* ================= SUCCESS POPUP ================= */}
